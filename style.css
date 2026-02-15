@@ -1,0 +1,485 @@
+:root {
+  --color-light-xl: #fff;
+  --color-light-l: #f6f6f6;
+  --color-light-s: #fafafa;
+  --color-dark-s: #cdcdcd;
+  --color-dark-m: #b2b2b2;
+  --color-dark-l: #545454;
+  --color-dark-xl: #4c4c4c;
+  --color-dark-2xl: #444;
+  --color-dark-3xl: #292929;
+  --color-primary: #f1cdb3;
+  --color-primary-light: #fddcc4;
+  --start-screen-gradient-background: #211f20;
+  --footer-gradient-background: #211f20;
+  --font-family: "Georgia", sans-serif;
+  --second-family: "Arial", sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+/* базовый сброс */
+body {
+  margin: 0;
+}
+
+/* hero занимает минимум весь экран */
+.header {
+  min-height: 100vh;
+}
+
+/* градиентный фон */
+.grad {
+  background-image: url("./img/start-screen-gradient-background\ \(1\).svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+/* универсальный контейнер */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* HEADER: лого + навигация */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 30px;
+}
+
+/* навигация */
+.nav {
+  display: flex;
+  gap: 35px;
+  list-style: none;
+}
+
+.nav li a {
+  text-decoration: none;
+  font-family: var(--second-family);
+  color: var(--color-light-s);
+  font-size: 15px;
+  position: relative;
+  padding-bottom: 4px;
+  transition: .3s;
+}
+
+/* активный пункт */
+.nav li a.active::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: var(--color-primary);
+}
+
+/* hover для остальных */
+.nav li a:hover {
+  color: var(--color-primary);
+}
+
+.nav li a:hover::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: var(--color-primary);
+}
+
+/* логотип */
+.logo {
+  display: flex;
+  flex-direction: column;
+}
+
+.h1 {
+  font-family: var(--font-family);
+  font-size: 32px;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  color: var(--color-primary);
+}
+
+.shelter {
+  font-family: var(--second-family);
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  color: var(--color-light-xl);
+}
+
+/* 🔥 HERO: текст + картинка */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 80px;
+}
+
+/* левая колонка */
+.content {
+  max-width: 460px;
+}
+
+/* заголовок */
+.h2 {
+  font-family: var(--font-family);
+  font-size: 44px;
+  font-weight: 400;
+  line-height: 130%;
+  color: var(--color-light-l);
+  margin-bottom: 40px;
+}
+
+/* текст */
+.we {
+  font-family: var(--second-family);
+  font-size: 15px;
+  line-height: 160%;
+  color: var(--color-dark-s);
+  margin-bottom: 40px;
+}
+
+/* кнопка */
+.btn {
+  padding: 15px 45px;
+  border-radius: 100px;
+  background: var(--color-primary);
+  border: none;
+  cursor: pointer;
+
+  font-family: var(--font-family);
+  font-size: 17px;
+  letter-spacing: 0.06em;
+  color: var(--color-dark-3xl);
+}
+
+/* правая колонка */
+.imagepup img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* 2 секция*/
+
+.about-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 120px;
+  margin-top: 80px;
+  width: 1280px;
+  height: 588px;
+}
+
+.about-title {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+  color: var(--color-dark-l);
+}
+
+.about-text {
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 160%;
+  color: var(--color-dark-xl);
+}
+
+.about-content {
+  width: 430px;
+  height: 380px;
+}
+
+/* 3 секция */
+
+.pets {
+  background: var(--color-light-l);
+  padding: 80px 0;
+}
+
+/* контейнер секции */
+.pets-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* заголовок */
+.pets-title {
+  font-family: var(--font-family);
+  font-size: 35px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+  text-align: center;
+  color: var(--color-dark-l);
+  margin-bottom: 60px;
+}
+
+/* контейнер карточек */
+
+/* карточка питомца */
+.pet-card {
+  width: 270px;
+  background: #fafafa;
+  border-radius: 9px;
+  text-align: center;
+  padding: 30px 35px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* имя питомца */
+.pet-name {
+  font-family: var(--font-family);
+  font-size: 20px;
+  letter-spacing: 0.06em;
+  color: var(--color-dark-l);
+  margin: 30px 0;
+}
+
+/* кнопка в карточке */
+.btn-outline {
+  background: transparent;
+  border: 2px solid var(--color-primary);
+  border-radius: 100px;
+  padding: 15px 45px;
+  font-family: var(--font-family);
+  cursor: pointer;
+}
+/* контейнер слайдера */
+.slider {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 60px;
+}
+
+.slider-window {
+  width: 870px;
+  overflow: hidden;
+}
+
+.pet-card {
+  width: 270px;
+  padding: 30px 35px;
+  box-sizing: border-box; /* 🔥 ОБЯЗАТЕЛЬНО */
+  flex-shrink: 0;
+}
+
+/* лента */
+.slider-track {
+  display: flex;
+  gap: 30px;
+  transition: transform 0.5s ease;
+}
+
+/* кнопки */
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: 2px solid var(--color-primary);
+  background: transparent;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+/* левая */
+.slider-btn.prev {
+  left: 0;
+}
+
+/* правая */
+.slider-btn.next {
+  right: 0;
+}
+
+/* 4 секция */
+.help {
+  height: 588px;
+}
+
+.help-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+}
+
+.hp {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+  text-align: center;
+  color: var(--color-dark-l);
+}
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 55px 120px;
+  justify-items: center;
+}
+
+.list-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.listpet {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 115%;
+  letter-spacing: 0.06em;
+  text-align: center;
+  color: var(--color-dark-l);
+}
+
+
+/* 5 секция */
+
+.donation {
+  background-color: var(--color-light-l);
+
+  height: 462px;
+}
+
+.dog {
+  width: 505px;
+  height: 261px;
+}
+
+.contpet {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+  color: var(--color-dark-l);
+}
+
+.textpet {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 110%;
+  letter-spacing: 0.06em;
+  color: var(--color-dark-l);
+}
+.crc {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  font-family: var(--font-family);
+  font-size: 20px;
+  letter-spacing: 0.06em;
+  color: var(--color-dark-l);
+}
+
+.creditcard {
+  display: flex;
+  align-items: center; /* вертикально */
+  justify-content: center; /* горизонтально */
+
+  gap: 15px; /* расстояние между иконкой и номером */
+
+  border-radius: 9px;
+  padding: 10px 15px;
+  width: 349px;
+  height: 43px;
+  background: var(--color-primary);
+}
+
+.legal {
+  font-family: var(--second-family);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 150%;
+  color: var(--color-dark-m);
+}
+
+.donation-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 120px;
+
+  margin: 80px auto 0; /* 🔥 ВОТ ЭТО ГЛАВНОЕ */
+  max-width: 1200px; /* лучше, чем width */
+}
+
+
+/* 6 секция */
+.footer{
+  background-color: var(--start-screen-gradient-background);
+  padding: 60px 0;
+}
+
+/* Контейнер */
+.footer-content{
+  max-width: 1200px;
+  margin: auto;                 /* центрируем блок */
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;       /* чтобы текст выровнялся по верхнему краю */
+  gap: 80px;
+}
+
+/* Левая и средняя колонки */
+.contacts, .locations {
+  width: 300px;                  /* фиксированная ширина, чтобы всё стояло ровно */
+}
+
+/* Заголовки */
+.textcon, .loca{
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 130%;
+  color: var(--color-light-xl);
+  margin-bottom: 30px;
+}
+
+/* Email, телефон */
+.textmail, .textphone, .Boston, .london{
+  font-family: var(--font-family);
+  font-size: 20px;
+  letter-spacing: 0.06em;
+  color: var(--color-primary);
+  margin-bottom: 20px;
+  display: flex;
+  gap: 12px;                     /* расстояние между иконкой и текстом */
+  align-items: center;
+}
+
+/* Картинка справа */
+.footer-pup img{
+  width: 400px;                  /* можно отрегулировать */
+  display: block;
+}
+

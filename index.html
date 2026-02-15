@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cozy House</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- HERO / HEADER -->
+    <header class="header grad">
+      <div class="container header-container">
+        <!-- ЛОГО -->
+        <div class="logo">
+          <h1 class="h1">
+            Cozy House<br />
+            <span class="shelter">Shelter for pets in Boston</span>
+          </h1>
+        </div>
+
+        <!-- НАВИГАЦИЯ -->
+        <nav>
+          <ul class="nav">
+            <li><a href="#about">About the shelter</a></li>
+            <li><a href="#pets">Our pets</a></li>
+            <li><a href="#help">Help the shelter</a></li>
+            <li><a href="#footer">Contacts</a></li>
+          </ul>
+        </nav>
+      </div>
+ul>li*5>a*1
+      <!-- HERO СЕКЦИЯ -->
+      <section class="main-grad">
+        <!-- 🔥 ОБЩИЙ flex-контейнер для текста и картинки -->
+        <div class="container hero">
+          <!-- ЛЕВАЯ КОЛОНКА (ТЕКСТ) -->
+          <div class="content">
+            <h2 class="h2">
+              Not only people<br />
+              need a house
+            </h2>
+
+            <!-- ❗ это абзац, поэтому p, а не span -->
+            <p class="we">
+              We offer to give a chance to a little and nice puppy with an
+              extremely wide and open heart. He or she will love you more than
+              anybody else in the world, you will see!
+            </p>
+
+            <!-- кнопка без лишних обёрток -->
+            <button class="btn" type="button">Make a friend</button>
+          </div>
+
+          <!-- ПРАВАЯ КОЛОНКА (КАРТИНКА) -->
+          <div class="imagepup">
+            <img src="./img/start-screen-puppy.svg" alt="Dog" />
+          </div>
+        </div>
+      </section>
+    </header>
+
+    <!-- ВТОРАЯ СЕКЦИЯ -->
+    <section id="about" class="about">
+      <div class="container about-inner">
+        <!-- Левая колонка: изображение -->
+        <div class="about-image">
+          <img src="./img/about-pets.svg" alt="Cat and dog" />
+        </div>
+
+        <!-- Правая колонка: текст -->
+        <div class="about-content">
+          <h2 class="about-title">
+            About the shelter<br />
+            “Cozy House”
+          </h2>
+
+          <p class="about-text">
+            Currently we have 121 dogs and 342 cats on our hands and statistics
+            show that only 20% of them will find a family. The others will
+            continue to live with us and will be waiting for a lucky chance to
+            become dearly loved.
+          </p>
+
+          <p class="about-text">
+            We feed our wards with the best food and make sure that they do not
+            get sick, feel comfortable (including psychologically) and well. We
+            are supported by 87 volunteers and 28 employees of various skill
+            levels. About 12% of the animals are taken by the shelter staff.
+            Taking care of the animals, they become attached to the pets and
+            would hardly ever leave them alone.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- 3 секция -->
+
+    <section id="pets" class="pets">
+      <div class="container pets-inner">
+        <h2 class="pets-title">
+          Our friends who <br />
+          are looking for a house
+        </h2>
+
+        <!-- СЛАЙДЕР -->
+        <div class="slider">
+          <!-- кнопка влево -->
+          <button class="slider-btn prev">←</button>
+
+          <!-- ОКНО -->
+          <div class="slider-window">
+            <!-- ЛЕНТА -->
+            <div class="slider-track">
+              <div class="pet-card">
+                <img src="./img/pets-katrine.svg" alt="Katrine" />
+                <p class="pet-name">Katrine</p>
+                <button class="btn-outline">Learn more</button>
+              </div>
+
+              <div class="pet-card">
+                <img src="./img/pets-jennifer.svg" alt="Jennifer" />
+                <p class="pet-name">Jennifer</p>
+                <button class="btn-outline">Learn more</button>
+              </div>
+
+              <div class="pet-card">
+                <img src="./img/pets-woody.svg" alt="Woody" />
+                <p class="pet-name">Woody</p>
+                <button class="btn-outline">Learn more</button>
+              </div>
+
+              <!-- дополнительные карточки -->
+              <div class="pet-card">
+                <img src="./img/pets-jennifer.svg" alt="Sophia" />
+                <p class="pet-name">Sophia</p>
+                <button class="btn-outline">Learn more</button>
+              </div>
+
+              <div class="pet-card">
+                <img src="./img/pets-jennifer.svg" alt="Jennifer" />
+                <p class="pet-name">Jennifer</p>
+                <button class="btn-outline">Learn more</button>
+              </div>
+
+              <div class="pet-card">
+                <img src="./img/pets-woody.svg" alt="Sophia" />
+                <p class="pet-name">Sophia</p>
+                <button class="btn-outline">Learn more</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- кнопка вправо -->
+          <button class="slider-btn next">→</button>
+        </div>
+        <script src="script.js"></script>
+        <!-- ← подключаем JS -->
+        <button class="btn">Get to know the rest</button>
+      </div>
+    </section>
+    <!-- 4 -->
+    <section id="help" class="help">
+      <div class="help-content">
+        <h3 class="hp">
+          How you can help<br />
+          our shelter
+        </h3>
+
+        <div class="list">
+          <div class="list-card">
+            <img src="./img/icon-pet-food.svg" alt="" />
+            <p class="listpet">Pet food</p>
+          </div>
+
+          <div class="list-card">
+            <img src="./img/icon-transportation.svg" alt="" />
+            <p class="listpet">Transportation</p>
+          </div>
+
+          <div class="list-card">
+            <img src="./img/icon-toys.svg" alt="" />
+            <p class="listpet">Toys</p>
+          </div>
+
+          <div class="list-card">
+            <img src="./img/icon-bowls-and-cups.svg" alt="" />
+            <p class="listpet">Bowls and cups</p>
+          </div>
+
+          <div class="list-card">
+            <img src="./img/icon-shampoos.svg" alt="" />
+            <p class="listpet">Shampoos</p>
+          </div>
+
+          <div class="list-card">
+            <img src="./img/icon-vitamins.svg" alt="" />
+            <p class="listpet">Vitamins</p>
+          </div>
+
+          <div class="list-card">
+            <img src="./img/icon-medicines.svg" alt="" />
+            <p class="listpet">Medicines</p>
+          </div>
+
+          <div class="list-card">
+            <img src="./img/icon-collars-leashes.svg" alt="" />
+            <p class="listpet">Collars-leashes</p>
+          </div>
+
+          <div class="list-card">
+            <img src="./img/icon-sleeping-area.svg" alt="" />
+            <p class="listpet">Sleeping areas</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- 5 -->
+    <section class="donation">
+      <div class="donation-content">
+        <div class="dog">
+          <img src="./img/donation-dog.svg" alt="" />
+        </div>
+        <div class="content">
+          <p class="contpet">
+            You can also<br />
+            make a donation
+          </p>
+          <p class="textpet">Name of the bank / Type of bank account</p>
+          <div class="creditcard">
+            <p class="crc">
+              <img src="./img/credit-card.svg" alt="" /> 8380 2880 8028 8791
+              7435
+            </p>
+          </div>
+          <p class="legal">
+            Legal information and lorem ipsum dolor sit amet, consectetur<br />
+            adipiscing elit. Maecenas a ipsum at libero sagittis dignissim sed
+            ac<br />
+            diam. Praesent ultrices maximus tortor et vulputate. Interdum et<br />
+            malesuada fames ac ante ipsum primis in faucibus.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- 6 -->
+    <section id="footer" class="footer">
+      <div class="footer-content">
+        <div class="contacts">
+          <p class="textcon">
+            For questions<br />
+            and suggestions
+          </p>
+          <p class="textmail">
+            <img src="./img/icon-email.svg" alt="mail" /> email@shelter.com
+          </p>
+          <p class="textphone">
+            <img src="./img/icon-phone.svg" alt="" /> +13 674 567 75 54
+          </p>
+        </div>
+        <div class="locations">
+          <p class="loca">
+            We are waiting<br />
+            for your visit
+          </p>
+          <p class="Boston">
+            <img src="./img/icon-marker.svg" alt="mail" /> 1 Central Street,
+            Boston<br />
+            (entrance from the store)
+          </p>
+          <p class="london">
+            <img src="./img/icon-marker.svg" alt="mail" /> 18 South Park, London
+          </p>
+        </div>
+        <div class="footer-pup">
+          <img src="./img/footer-puppy.svg" alt="" />
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
